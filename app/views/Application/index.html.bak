@@ -1,0 +1,22 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<div id ="login">
+#{form @searchRoom(), id:'formSearchRoom'}
+        <p> Start Date: <input id="startdatepicker" type="text" name = "aReservation.startDate"></p>
+        <p> End Date: <input id="enddatepicker" type="text" name = "aReservation.endDate"></p>
+        <p> RoomType: </p>
+        <p class="buttons">
+            <input type="submit" value="Search" />
+        </p> 
+    #{/form}
+</div>
+<div class="demo">
+
+</div>
+<script>
+	$(function() {
+		$( "#startdatepicker" ).datepicker();
+		$( "#enddatepicker" ).datepicker();
+	});
+</script>

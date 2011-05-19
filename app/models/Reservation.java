@@ -19,21 +19,31 @@ public class Reservation extends Model {
 	// Number of guess, adult only
 	public int numberOfGuest;
 	public String specialRequest;
-	
+	public RoomType roomType;
 	@ManyToMany
 	public List<Room> roomList = new ArrayList<Room>();
 	
 	public Reservation addRoom(Room aRoom){
 		roomList.add(aRoom);
+			
 		return this;
 		
 	}
 	public List<Room> getRoomList() {
 		return roomList;
 	}
-
-
+	/**
+	 * Return list of number of all room reserved for this 
+	 * @return
+	 */
+    public List<String> getAllRoomNumber(){
+    	List<String> retVal = new ArrayList<String>();
+    	for (Room it : roomList){
+    		retVal.add(it.roomNumber);
+    	}
+    	return retVal;
+    }
 	public String toString(){
-		return "From " +startDate + " to " + endDate + " Request:" + specialRequest + " Room " + roomList; 
+		return "From " +startDate + " to " + endDate + " Request:" + specialRequest + " Room Number " + getAllRoomNumber(); 
 	}
 }

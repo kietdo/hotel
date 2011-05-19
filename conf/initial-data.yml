@@ -1,5 +1,14 @@
 ## Data set up for hotel
+## RoomType
+RoomType(standard):
+   type:  Standard
+RoomType(deluxe):
+   type: Deluxe
+RoomType(suit):
+   type: Suit   
+      
 ## Price class
+
 Price(50):
    amount:     50.0
    currency:   USD
@@ -15,31 +24,31 @@ Price(100):
 
 Room(101):
    roomNumber:   101
-   roomType:     Standard
+   roomType:     standard
    price:        50
    capacity:     2
 Room(102):
    roomNumber:   102
-   roomType:     Standard
+   roomType:     standard
    price:        50
    capacity:     2
 Room(201):
-   roomNumber:   102
-   roomType:     Deluxe
+   roomNumber:   201
+   roomType:     deluxe
    price:        70
    capacity:     2  
 Room(202):
    roomNumber:   202
-   roomType:     Standard
+   roomType:     deluxe
    price:        70
    capacity:     2
 Room(301):
    roomNumber:   301
-   roomType:     Suit
+   roomType:     suit
    price:        100
    capacity:     2
 Room(401):
    roomNumber:   401
-   roomType:     Suit
+   roomType:     suit
    price:        100
    capacity:     2       

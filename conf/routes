@@ -4,6 +4,9 @@
 
 # Home page
 GET     /                                       Application.index
+GET	    /test									Application.test
+GET	    /test2									Application.test2
+*       /searchRoom								Application.searchRoom
 *       /admin                                  module:crud
 
 # Ignore favicon requests

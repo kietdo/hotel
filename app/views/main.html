@@ -5,12 +5,30 @@
         <title>#{get 'title' /}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        <link rel="stylesheet" type="text/css" media="screen" 
+               href="@{'public/stylesheets/jquery-ui-1.8.12.custom.css'}" />
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/lavalamp.css'}">       
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
         <script src="@{'/public/javascripts/jquery-1.5.2.min.js'}" type="text/javascript" charset="utf-8"></script>
+        <script src="@{'/public/javascripts/jquery-ui-1.8.12.custom.min.js'}" type="text/javascript" charset="utf-8"></script>
+         <script src="@{'/public/javascripts/jquery.lavalamp.js'}" type="text/javascript" charset="utf-8"></script>
+         <script src="@{'/public/javascripts/jquery.easing.min.js'}" type="text/javascript" charset="utf-8"></script>
         #{get 'moreScripts' /}
     </head>
     <body>
+    <div id="header">
+            <h1>booking demo</h1>
+            	<div id="options">
+                    Connected as Guest
+                    |
+                    <a href="@{Application.searchRoom()}">Search</a>
+                    |
+                    <a href="@{Application.index()}">Settings</a>
+                    |
+                    <a href="/admin">Admin</a>
+                </div>
+           </div>
         #{doLayout /}
     </body>
 </html>
